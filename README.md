@@ -11,6 +11,13 @@
 
 **SmartWeather** is a modern, single-page weather application that provides hyperlocal weather data, live radar maps, and official National Weather Service alerts. Built with accessibility and user experience in mind, it offers multiple theme modes, color vision filters, and responsive design for all devices.
 
+### Quickstart
+
+1) Clone the repo `git clone https://github.com/johnlewissims/SmartWeather.git`.
+2) Open app in terminal and cd into react folder. (`cd SmartWeather/smartweather-react`)
+3) Install react `npm install`
+4) Run `npm run dev`
+
 ### Key Features
 
 #### Weather Data
