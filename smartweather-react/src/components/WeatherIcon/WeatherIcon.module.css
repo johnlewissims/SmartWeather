@@ -1,0 +1,111 @@
+/* Base icon container */
+.iconContainer {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+}
+
+/* Clear sky - sun rotating */
+.clear {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Night - gentle pulsing */
+.night {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Partly cloudy - subtle floating */
+.partly {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Cloudy - gentle drift */
+.cloud {
+  animation: drift 6s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Rain - vertical bounce */
+.rain {
+  animation: rainBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes rainBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* Snow - gentle falling sway */
+.snow {
+  animation: snowfall 3s ease-in-out infinite;
+}
+
+@keyframes snowfall {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(2px) translateX(2px);
+  }
+  75% {
+    transform: translateY(2px) translateX(-2px);
+  }
+}
+
+/* Storm - shake/vibrate */
+.storm {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(-1deg); }
+  75% { transform: translateX(2px) rotate(1deg); }
+}
+
+/* Fog - fade in/out */
+.fog {
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Size variants */
+.sm {
+  font-size: 1.25rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}

@@ -1,0 +1,131 @@
+@import 'themes.css';
+@import 'animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--sw-bg);
+  color: var(--sw-text);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Accessibility - SVG filter application */
+html.a11y-deut {
+  filter: url(#f-deut);
+}
+
+html.a11y-prot {
+  filter: url(#f-prot);
+}
+
+html.a11y-trit {
+  filter: url(#f-trit);
+}
+
+/* Large text mode */
+html.large-text {
+  font-size: 16px;
+}
+
+html.large-text .text-base {
+  font-size: 15px;
+}
+
+html.large-text .text-lg-text {
+  font-size: 17.5px;
+}
+
+/* High contrast mode */
+html.high-contrast {
+  --sw-surface: rgba(255, 255, 255, 0.1);
+  --sw-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Leaflet map fixes */
+.leaflet-container {
+  background: transparent;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--sw-surface);
+  color: var(--sw-text);
+  border: 1px solid var(--sw-border);
+}
+
+.leaflet-popup-close-button {
+  color: var(--sw-text) !important;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--sw-accent);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--sw-accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,22 @@
+/* Dark Theme (Default) */
+:root,
+.theme-dark {
+  --sw-bg: #020617;
+  --sw-surface: rgba(255, 255, 255, 0.045);
+  --sw-border: rgba(255, 255, 255, 0.09);
+  --sw-text: #f1f5f9;
+  --sw-muted: #64748b;
+  --sw-accent: #06b6d4;
+  --sw-accent-text: #a5f3fc;
+}
+
+/* Light Theme */
+.theme-light {
+  --sw-bg: #f8fafc;
+  --sw-surface: rgba(0, 0, 0, 0.03);
+  --sw-border: rgba(0, 0, 0, 0.1);
+  --sw-text: #0f172a;
+  --sw-muted: #64748b;
+  --sw-accent: #0891b2;
+  --sw-accent-text: #164e63;
+}
